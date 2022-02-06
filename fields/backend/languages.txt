@@ -1,0 +1,12 @@
+python
+javascript
+c#
+ruby
+php
+
+frameworks:
+	django
+	laravel
+	ruby on rail
+	.net
+	vue js

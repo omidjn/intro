@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" media="screen and (min-width: 700px)" href="css/Trend.css">
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="css/Trend_mobile.css">
+</head>
+
+<body>
+    <div class="top">
+        <header>
+            <a href="#" class="logo">Droodle</a>
+
+            <form class="search-form" onsubmit="" role="search">
+                <input class="search" type="search" placeholder="Search..." autofocus required />
+                <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="#">Add Post</a></li>
+                    <li><a href="#">Followings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+            <span class="sidenav-icon" onclick="openNav()">☰</span>
+            <div class="profile">
+                <p class="username">omid</p>
+                <img src="images/omid.jpg" alt="" class="profile-image">
+            </div>
+        </header>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="cut-text">
+            omid
+        </div>
+        <img src="images/omid.jpg" alt="" class="profile-image">
+        <div class="links">
+            <a href="#">Add Post</a>
+            <a href="#">Followings</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
+    <div class="role">
+        <div class="wrapper">
+            <div class="nav">
+                <img src="images/omid.jpg" alt="">
+                <p class="postusername">omid</p>
+                <button class="follow">FOLLOW</button>
+            </div>
+            <div class="left">
+                <img class="image" src="images/etesali.jpg" alt="">
+                <div class="mintext">
+                    <h1>etesali</h1>
+                    <h3>catchybeats</h3>
+                </div>
+                <div class="nav1">
+                    <img src="images/omid.jpg" alt="">
+                    <p class="postusername">omid</p>
+                    <button class="follow">FOLLOW</button>
+                </div>
+            </div>
+            <div class="right">
+                <div class="like_box">
+                    <p class="like_num">0</p>
+                    <button onclick="like(0)" class="like"><i class="fa fa-heart-o"></i></button>
+                    <button class="download"><i class="fa fa-download"></i></button>
+                </div>
+                <div class="text">
+                    <div class="title">
+                        <h1>etesali</h1>
+                        <h3>catchybeats</h3>
+                        <div class="player">
+                            <button onclick="playAudio(0)" class="btn"><i class="fa fa-play"></i></button>
+                            <audio controls controlsList="nodownload">
+                                <source src="images/samsonite.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <p class="cur"></p>
+                            <input class="sec" type="range" value='0' min="0" max="50">
+                            <p class="dur"></p>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <p>Phasellus imperdiet, nulla et dictum , nisi lorem egestas vitae scel<span class="dots"><a onclick='readMore(0)'> more...</a></span><span class="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                    </div>
+                </div>
+                <div class="d-box">
+                    <button class="download"><i class="fa fa-download"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/Trends.js"></script>
+
+</body>
+
+</html>

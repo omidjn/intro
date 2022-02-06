@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+$back: #141414;
+$front: rgb(37,
+37,
+37);
+body {
+    font-family: 'Montserrat';
+    background-color: $back;
+    margin: 0;
+}
+
+ ::-webkit-scrollbar {
+    width: 9px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    img {
+        float: right;
+        right: 25%;
+        user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        top: 180px;
+        position: absolute;
+        filter: drop-shadow(30px 10px 4px #adadad); //#3e3eff
+    }
+    .content-text {
+        padding: 8em;
+        padding-top: 200px;
+        max-width: 1200;
+        margin: 0 auto;
+    }
+}
+
+:root {
+    --rad: .3rem;
+    --dur: .5s;
+    --color-dark: #ececec;
+    --color-light: rgb(48, 48, 48);
+    --color-brand: #131313;
+    --height: 2.5rem;
+    --btn-width: 3.5rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+header {
+    display: flex;
+    position: relative;
+    padding: 1.2em 2em;
+    width: 100%;
+    .logo {
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-right: 6%;
+        margin-top: 0.2em;
+    }
+}
+
+.search-form {
+    position: relative;
+    width: 17rem;
+    background: var(--color-brand);
+    border-radius: var(--rad);
+}
+
+.search,
+.search-button {
+    height: var(--height);
+    border: 0;
+    font-size: 1rem;
+}
+
+.search {
+    outline: 0;
+    width: 100%;
+    background: var(--color-light);
+    padding: 0 1.6rem;
+    border-radius: var(--rad);
+    appearance: none;
+    transition: all var(--dur) var(--bez);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+    color: #ececec;
+}
+
+.search-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--btn-width);
+    font-weight: bold;
+    background: var(--color-brand);
+    border-radius: 0 var(--rad) var(--rad) 0;
+    color: var(--color-dark);
+}
+
+.search:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+    +.search-button {
+        display: block;
+    }
+}
+
+.top {
+    width: 100%;
+}
+
+.role {
+    margin-top: 20px;
+    .card {
+        display: flex;
+        justify-content: space-between;
+        .profile {
+            display: flex;
+            .profile-image {
+                border-radius: 50%;
+                width: 70px;
+                margin-left: 10px;
+                height: 70px;
+            }
+            .username {
+                color: #ffffff;
+                margin-top: 30px;
+                margin-left: 15px;
+                font-size: 20px;
+                font-weight: 500;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 80px;
+                white-space: nowrap;
+                @media screen and (max-width: 700px) {
+                    font-size: 18px;
+                }
+                @media screen and (max-width: 500px) {
+                    font-size: 15px;
+                }
+            }
+        }
+        .info {
+            display: flex;
+            color: white;
+            .group {
+                margin-top: -10px;
+                margin-right: 100px;
+                p {
+                    font-size: 20px;
+                    text-align: center;
+                    font-weight: 500;
+                    margin-bottom: 8px;
+                }
+                @media screen and (max-width: 1000px) {
+                    margin-right: 70px;
+                }
+                @media screen and (max-width: 800px) {
+                    margin-right: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .role {
+        .card {
+            .info {
+                .group {
+                    margin-right: 30px;
+                    margin-top: -5px;
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .role {
+        .card {
+            .info {
+                .group {
+                    margin-right: 17px;
+                    margin-top: 2px;
+                    p {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+hr {
+    opacity: 0.4;
+}
+
+@media screen and (max-width: 405px) {
+    .search-form {
+        width: 20rem;
+    }
+    header {
+        .logo {
+            display: none;
+        }
+    }
+    .role {
+        .card {
+            .profile {
+                .username {
+                    font-size: 20px;
+                }
+            }
+            .info {
+                display: none;
+            }
+        }
+    }
+}

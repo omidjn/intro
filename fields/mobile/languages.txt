@@ -1,0 +1,15 @@
+Android:
+	java
+	kotlin
+
+Ios:
+	swift
+	Objective c
+
+CrossPlatform:
+	dart
+	js
+	
+	Frameworks:
+		Flutter 
+		React Ntive

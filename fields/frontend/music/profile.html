@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body style="background-color: rgb(34, 34, 34);">
+    <div class="nav">
+        <!-- <button><i class="fa fa-chevron-left"></i></button> -->
+        <button><i class="fa fa-arrow-left"></i></button>
+    </div>
+    <div class="wrapper">
+        <div class="top">
+            <div class="group">
+                <h2>851</h2>
+                <p>Posts</p>
+            </div>
+            <div class="group">
+                <h2>34.2K</h2>
+                <p>Follower</p>
+            </div>
+            <div class="group">
+                <h2>10.2K</h2>
+                <p>Following</p>
+            </div>
+
+        </div>
+        <img class="profile" src="images/omid.jpg" alt="">
+        <div class="info">
+            <h3>Omid Jalilian</h3>
+            <h4>Omidjn</h4>
+        </div>
+        <button class="follow">FOLLOW</button>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'All')">All</button>
+        </div>
+
+        <div id="All" class="tabcontent">
+            <div class="role">
+                <div class="post">
+                    <div class="left">
+                        <img class="image" src="images/etesali.jpg" alt="">
+                        <div class="nav">
+                            <img src="images/omid.jpg" alt="">
+                            <p class="postusername">omid</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="text">
+                            <div class="title">
+                                <h1>etesali</h1>
+                                <h3>catchybeats</h3>
+                            </div>
+                            <div class="desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots"><a onclick='readMore()'> more...</a></span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                            </div>
+                        </div>
+                        <div class="player">
+                            <button onclick="playAudio(0)" class="btn"><i class="fa fa-play"></i></button>
+                            <audio controls controlsList="nodownload">
+                                <source src="images/samsonite.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <p class="cur"></p>
+                            <input class="sec" type="range" value='0' min="0" max="50">
+                            <p class="dur"></p>
+                        </div>
+                        <button class="download">download</button>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="left">
+                        <img class="image" src="images/etesali.jpg" alt="">
+                        <div class="nav">
+                            <img src="images/omid.jpg" alt="">
+                            <p class="postusername">omid</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="text">
+                            <div class="title">
+                                <h1>etesali</h1>
+                                <h3>catchybeats</h3>
+                            </div>
+                            <div class="desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots"><a onclick='readMore()'> more...</a></span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                            </div>
+                        </div>
+                        <div class="player">
+                            <button onclick="playAudio(0)" class="btn"><i class="fa fa-play"></i></button>
+                            <audio controls controlsList="nodownload">
+                                <source src="images/samsonite.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <p class="cur"></p>
+                            <input class="sec" type="range" value='0' min="0" max="50">
+                            <p class="dur"></p>
+                        </div>
+                        <button class="download">download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/profile.js"></script>
+
+</body>
+
+</html>

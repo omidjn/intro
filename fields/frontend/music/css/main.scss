@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(70, 70, 70);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    .profile-image {
+        border-radius: 50%;
+        display: flex;
+        position: absolute;
+        width: 70px;
+        top: 25px;
+        left: 30px;
+    }
+    .cut-text {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 120px;
+        height: 1.2em;
+        white-space: nowrap;
+        position: absolute;
+        left: 110px;
+        top: 55px;
+    }
+    .links {
+        margin-top: 50px;
+    }
+    .links a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    a:hover {
+        color: #f1f1f1;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    overflow-x: hidden;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    img {
+        float: right;
+        right: 25%;
+        user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        top: 180px;
+        position: absolute;
+        filter: drop-shadow(30px 10px 4px #adadad); //#3e3eff
+    }
+    .content-text {
+        padding: 8em;
+        padding-top: 200px;
+        max-width: 1200;
+        margin: 0 auto;
+    }
+}
+
+:root {
+    --rad: .3rem;
+    --dur: .5s;
+    --color-dark: #ececec;
+    --color-light: rgb(48, 48, 48);
+    --color-brand: #131313;
+    --height: 2.5rem;
+    --btn-width: 3.5rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+.sidenav-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    display: none;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    padding: 1.2em 2em;
+    width: 100%;
+    .logo {
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-right: 6%;
+        margin-top: 0.2em;
+    }
+    .profile {
+        position: absolute;
+        right: 25px;
+        top: 10px;
+        display: flex;
+        width: 150px;
+        .username {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 80px;
+            height: 1.2em;
+            white-space: nowrap;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+        .profile-image {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            right: 0;
+        }
+        @media screen and (max-width: 1080px) {
+            width: 200px;
+        }
+    }
+}
+
+ul {
+    display: flex;
+    margin-top: 11px;
+    margin-left: 50px;
+}
+
+li a {
+    padding: 0 2em;
+    opacity: 0.8;
+}
+
+.search-form {
+    position: relative;
+    width: 17rem;
+    background: var(--color-brand);
+    border-radius: var(--rad);
+}
+
+.search,
+.search-button {
+    height: var(--height);
+    border: 0;
+    font-size: 1rem;
+}
+
+.search {
+    outline: 0;
+    width: 100%;
+    background: var(--color-light);
+    padding: 0 1.6rem;
+    border-radius: var(--rad);
+    appearance: none;
+    transition: all var(--dur) var(--bez);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+    color: #ececec;
+}
+
+.search-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--btn-width);
+    font-weight: bold;
+    background: var(--color-brand);
+    border-radius: 0 var(--rad) var(--rad) 0;
+    color: var(--color-dark);
+}
+
+.search:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+    +.search-button {
+        display: block;
+    }
+}
+
+.top {
+    width: 100%;
+}
+
+.line {
+    position: absolute;
+    left: -10px;
+    top: 190px;
+    transform: rotate(-5deg);
+    height: 100px;
+    width: 150%;
+    background-color: #ffffff;
+    opacity: 0.1;
+}
+
+.line1 {
+    position: absolute;
+    left: -10px;
+    top: 140px;
+    transform: rotate(-5deg);
+    height: 100px;
+    width: 150%;
+    background-color: #ffffff;
+    opacity: 0.1;
+}
+
+@media screen and (max-width: 1080px) {
+    .sidenav-icon {
+        display: flex;
+    }
+    header li a {
+        display: none;
+    }
+    .profile-image {
+        margin-right: 50px;
+    }
+    .username {
+        margin-right: 80px;
+    }
+    .line,
+    .line1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    header li a,
+    .profile-image,
+    .username {
+        display: none;
+    }
+    .content img {
+        top: 55%;
+        right: 15%;
+    }
+    .line {
+        top: 220px;
+    }
+    .line1 {
+        top: 170px;
+    }
+    header {
+        padding: 1.2em 1em;
+        .logo {
+            font-size: 1.4em;
+            margin-right: 4%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content img {
+        top: 45%;
+        right: 25%;
+    }
+    .content .content-text {
+        padding: 8em 0em 0em 5em;
+    }
+}
